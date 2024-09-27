@@ -7,7 +7,7 @@
  * @license The MIT License, http://opensource.org/licenses/MIT
  */
 
-// For more information see http://en.gravatar.com/site/implement/images/
+// For more information see https://docs.gravatar.com/api/avatars/images/
 
 $config['gravatar_base_url'] = 'http://www.gravatar.com/';
 $config['gravatar_secure_base_url'] = 'https://secure.gravatar.com/';

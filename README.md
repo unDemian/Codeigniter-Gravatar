@@ -49,7 +49,7 @@ echo '<br />';
 echo '<br />';
 ```
 
-This library has been documented inside its source. For overall information about accessing gravatars see https://en.gravatar.com/site/implement/
+This library has been documented inside its source. For overall information about accessing gravatars see https://docs.gravatar.com/api/avatars/
 
 Requirements
 ------------

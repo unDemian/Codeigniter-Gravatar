@@ -109,7 +109,7 @@ class Gravatar {
 
     /**
      * Creates a URL for requesting a Gravatar image.
-     * @link http://en.gravatar.com/site/implement/images/
+     * @link https://docs.gravatar.com/api/avatars/images/
      *
      * @param   string      $email                  A registered email.
      * @param   int         $size                   The requested size of the avarar in pixels (a square image).
@@ -176,7 +176,7 @@ class Gravatar {
 
     /**
      * Executes a request for Gravatar profile data and returns it as a multidimensional array.
-     * @link https://docs.gravatar.com/profiles/php/
+     * @link https://docs.gravatar.com/api/avatars/php/
      *
      * @param   string      $email          A registered email.
      * @return  array/null                  Received profile data.
@@ -218,7 +218,7 @@ class Gravatar {
 
     /**
      * Executes a request for Gravatar profile data and returns raw received response.
-     * @link https://docs.gravatar.com/profiles/php/
+     * @link https://docs.gravatar.com/api/avatars/php/
      *
      * @param   string      $email      A registered email.
      * @param   string      $format     '', 'json', 'xml', 'php', 'vcf', 'qr'.
@@ -331,14 +331,14 @@ class Gravatar {
 
     /**
      * Creates a hash value from a provided e-mail address.
-     * @link https://docs.gravatar.com/gravatar-images/php/
+     * @link https://docs.gravatar.com/api/avatars/php/
      *
      * @param   string      $email      A registered email.
      * @return  string/null             The hash for accessing the avatar or profile data.
      */
     public function create_hash($email) {
 
-        return md5(strtolower(trim((string) $email)));
+        return hash('sha256', strtolower(trim((string) $email)));
     }
 
     protected function is_https() {
@@ -365,7 +365,7 @@ class Gravatar {
 
     /**
      * Creates a sha256 hash value from a provided e-mail address.
-     * @link https://docs.gravatar.com/general/hash/
+     * @link https://docs.gravatar.com/api/avatars/hash/
      *
      * @param   string      $email      A registered email.
      * @return  string/null             The hash for accessing the avatar or profile data.
